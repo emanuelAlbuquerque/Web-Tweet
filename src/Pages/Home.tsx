@@ -20,14 +20,14 @@ export function Home(){
         <div className='flex w-[90%] my-0 mx-auto justify-center py-3 h-[90%]'>
           <div className='w-[20%] h-[100%] flex flex-col justify-between mr-8 '>
             <SlideMenu />
-            <Profile />
+            <Profile Name='Emanuel' Email='@emanuel'/>
           </div>
           <div className='w-[40%] flex flex-col' >
             <Header.Root>
               <Header.Title>
                 Home
               </Header.Title>
-              <Header.Icon>
+              <Header.Icon link='homeDark'>
                 <IconHeader />
               </Header.Icon>
             </Header.Root>
