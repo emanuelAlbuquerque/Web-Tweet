@@ -3,11 +3,12 @@ import { Link } from "react-router-dom"
 
 export interface FooterProps{
   classe?: string
+  isDark?: boolean
 }
 
 export function Footer(props: FooterProps){
   return(
-    <footer className={clsx("bg-primary-blue px-4 py-1 w-full flex justify-between items-center", props.classe)}>
+    <footer className={clsx("bg-primary-blue px-4 py-1 w-full flex justify-between items-center", props.classe, {'bg-dark-3':props.isDark})}>
       {props.classe}
       <div className="text-white ml-36">
         <h2 className="text-22 font-700">Don't miss what's happening</h2>
