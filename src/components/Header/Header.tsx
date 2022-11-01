@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { clsx } from 'clsx'
+import { Link } from 'react-router-dom';
 
 
 
@@ -10,7 +11,7 @@ export interface HeaderRootProps{
 }
 function HeaderRoot({ isDark = false, children, className }: HeaderRootProps){
   return(
-    <header className={clsx("w-full flex justify-between items-cente px-3 py-4 font-700 text-19 text-black border-b-[1px] border-dark-7", 
+    <header className={clsx("w-full flex justify-between items-cente px-3 pb-2 font-700 text-19 text-black border-b-[1px] border-dark-7", 
                       {
                         "border-white": isDark,
                         "text-white": isDark,
@@ -36,12 +37,13 @@ function HeaderTitle(props: HeaderTitleProps){
 
 interface HeaderIconProps{
   children: ReactNode
+  link: string
 }
 function HeaderIcon(props: HeaderIconProps){
   return(
-    <button>
+    <Link to={props.link}>
       {props.children}
-    </button>
+    </Link>
   )
 }
 
