@@ -107,14 +107,25 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/emanuelAlbuquerque/projeto-loginCompass.git
+$ git clone https://github.com/emanuelAlbuquerque/Web-Tweet.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd projeto-loginCompass
+$ cd Web-Tweet
 
 # Abra a pasta no vsCode
 
-# Abra a pasta com o liveServer
+# Abre o terminal no vsCode e abre o terminal
+$ Ctrl "
+
+# Baixe as dependências
+$ npm install
+
+# Rode o Projeto com o vite
+$ npm run dev
+
+# Rode o Storybook
+$ npm run storybook
+
 ```
 
 
