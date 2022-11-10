@@ -1,12 +1,12 @@
 import { AvatarMedium, AvatarMediumProps } from "./AvatarMedium";
 import { Meta, StoryObj } from "@storybook/react";
-
+import imgUser from '../../assets/cooper.png'
 
 export default {
   title: 'Components/Avatar',
   component: AvatarMedium,
   args: {
-    size: '48px'
+    img: imgUser
   }
 } as Meta<AvatarMediumProps>
 
