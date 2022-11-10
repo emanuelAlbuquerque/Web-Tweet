@@ -1,6 +1,7 @@
 import { News, NewsProp } from "./News";
 import { Meta, StoryObj } from "@storybook/react";
 import { ItemNews } from "./ItemNews";
+import imgNoticia1 from '../../assets/img-noticia1.png'
 
 export default {
   title: 'Components/News',
@@ -20,6 +21,7 @@ export const NewsLight: StoryObj<NewsProp> = {
         tema='US news'
         horario='Last night'
         isDark={false}
+        img={imgNoticia1}
       />,
       <ItemNews
         hastag='#hashtag'
@@ -27,6 +29,7 @@ export const NewsLight: StoryObj<NewsProp> = {
         tema='US news'
         horario='Last night'
         isDark={false}
+        img={imgNoticia1}
       />,
       <ItemNews
         hastag='#hashtag'
@@ -34,6 +37,7 @@ export const NewsLight: StoryObj<NewsProp> = {
         tema='US news'
         horario='Last night'
         isDark={false}
+        img={imgNoticia1}
       />,
     ]
   }
@@ -48,6 +52,7 @@ export const NewsDark: StoryObj<NewsProp> = {
         tema='US news'
         horario='Last night'
         isDark={true}
+        img={imgNoticia1}
       />,
       <ItemNews
         hastag='#hashtag'
@@ -55,6 +60,7 @@ export const NewsDark: StoryObj<NewsProp> = {
         tema='US news'
         horario='Last night'
         isDark={true}
+        img={imgNoticia1}
       />,
       <ItemNews
         hastag='#hashtag'
@@ -62,6 +68,7 @@ export const NewsDark: StoryObj<NewsProp> = {
         tema='US news'
         horario='Last night'
         isDark={true}
+        img={imgNoticia1}
       />,
     ]
   }
