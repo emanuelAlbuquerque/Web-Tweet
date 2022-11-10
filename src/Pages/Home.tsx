@@ -105,7 +105,7 @@ export function Home(){
               <Header.Title>
                 Home
               </Header.Title>
-              <Header.Icon link='homeDark'>
+              <Header.Icon>
                 <IconHeader />
               </Header.Icon>
             </Header.Root>
