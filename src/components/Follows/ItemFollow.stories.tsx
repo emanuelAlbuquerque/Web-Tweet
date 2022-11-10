@@ -1,6 +1,7 @@
 import { ItemFollow, ItemFollowProps} from "./ItemFollow";
 import { withRouter } from 'storybook-addon-react-router-v6'
 import { Meta, StoryObj } from "@storybook/react";
+import imgCooper from '../../assets/cooper.png'
 
 export default {
   title: 'Components/ItemFollows',
@@ -8,7 +9,8 @@ export default {
   decorators: [withRouter],
   args: {
     email: '@emanuel',
-    name: 'Emanuel'
+    name: 'Emanuel',
+    img: imgCooper
   }
 } as Meta<ItemFollowProps>
 

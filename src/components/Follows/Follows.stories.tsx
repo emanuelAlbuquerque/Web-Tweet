@@ -2,6 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { Follows, FollowsProps } from "./Follows";
 import { ItemFollow } from "./ItemFollow";
 import { withRouter } from 'storybook-addon-react-router-v6'
+import imgCooper from '../../assets/cooper.png'
 
 export default {
   title: 'Components/Follows',
@@ -16,17 +17,20 @@ export const FollowsLight: StoryObj<FollowsProps> = {
       <ItemFollow
         name="Emanuel"
         email="@emanuel" 
+        img={imgCooper}
         isDark={false}
       />,
       <ItemFollow
         name="Emanuel"
         email="@emanuel"
         isDark={false}
+        img={imgCooper}
       />,
       <ItemFollow
         name="Emanuel"
         email="@emanuel"
         isDark={false}
+        img={imgCooper}
       />,
     ]
   }
@@ -39,16 +43,19 @@ export const FollowsDark: StoryObj<FollowsProps> = {
           name="Emanuel"
           email="@emanuel"
           isDark={true}
+          img={imgCooper}
         />,
         <ItemFollow
           name="Emanuel"
           email="@emanuel"
           isDark={true}
+          img={imgCooper}
         />,
         <ItemFollow
           name="Emanuel"
           email="@emanuel"
           isDark={true}
+          img={imgCooper}
         />,
       ]
     }
