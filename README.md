@@ -63,16 +63,23 @@ O layout da aplicação está disponível no Figma:
 
 - Login
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
-  <img alt="Tela de login" src="https://github.com/emanuelAlbuquerque/projeto-loginCompass/blob/main/src/assets/img-README/login.png">
-  <img alt="Tela de login preenchido" src="https://github.com/emanuelAlbuquerque/projeto-loginCompass/blob/main/src/assets/img-README/login-preenchido.png">
-  <img alt="Tela de login com error" src="https://github.com/emanuelAlbuquerque/projeto-loginCompass/blob/main/src/assets/img-README/login-error.png">
+  <img alt="Tela de login" src="https://github.com/emanuelAlbuquerque/Web-Tweet/blob/main/src/assets/img-login.png">
 </p>
 
-- Home
+- Home Logado
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
-  <img alt="Tela de home" src="https://github.com/emanuelAlbuquerque/projeto-loginCompass/blob/main/src/assets/img-README/home.png">
-  <img alt="Modal de refresh" src="https://github.com/emanuelAlbuquerque/projeto-loginCompass/blob/main/src/assets/img-README/modal-refresh_home.png">
-  <img alt="Modal de logout" src="https://github.com/emanuelAlbuquerque/projeto-loginCompass/blob/main/src/assets/img-README/modal-logout_home.png">
+  <img alt="Tela de home" src="https://github.com/emanuelAlbuquerque/Web-Tweet/blob/main/src/assets/HomeLogadoDark.png">
+  <img alt="Modal de refresh" src="https://github.com/emanuelAlbuquerque/Web-Tweet/blob/main/src/assets/HomeLogado.png">
+</p>
+
+- Home Deslogado
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
+  <img alt="Tela de home" src="https://github.com/emanuelAlbuquerque/Web-Tweet/blob/main/src/assets/img-deslogado.png">
+</p>
+
+- Profile
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center; flex-direction: column;">
+  <img alt="Tela de home" src="https://github.com/emanuelAlbuquerque/Web-Tweet/blob/main/src/assets/PageProfile.png">
 </p>
 
 
@@ -80,18 +87,21 @@ O layout da aplicação está disponível no Figma:
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
+- Vite
 - HTML5 <img align="center" alt="Emanuel-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
-- CSS3 <img align="center" alt="Emanuel-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
-- SASS <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" height="30" width="40" />
-- JavaScript <img align="center" alt="Emanuel-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-
+- TypeScript <img align="center" alt="Emanuel-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
+- React <img align="center" alt="Emanuel-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+- Tailwind <img align="center" alt="Emanuel-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg">
+- StoryBook <img align="center" alt="Emanuel-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/storybook/storybook-original.svg">
 
 ## 🚀 Como executar o projeto
 
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), além disto é bom ter um editor para trabalhar com o código como [VSCode][vscode]
+- [Git](https://git-scm.com)
+- [VSCode](https://code.visualstudio.com/)
+- [Node](https://nodejs.org/en/)
 
 ### 🧭 Rodando a aplicação web (Front End)
 
