@@ -1,11 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Route, Routes, createBrowserRouter } from 'react-router-dom'
 import { App } from './App'
-import { PageNotFound } from './Pages/PageNotFound'
+import ThemeContextProvider from './hooks/useTheme'
+
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <ThemeContextProvider>
+      <App />
+    </ThemeContextProvider>
   </React.StrictMode>
 )
