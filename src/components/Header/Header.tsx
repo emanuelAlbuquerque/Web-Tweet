@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { clsx } from 'clsx'
 import { Link } from 'react-router-dom';
+import { useTheme } from '../../hooks/useTheme';
 
 
 
@@ -11,11 +12,8 @@ export interface HeaderRootProps{
 }
 function HeaderRoot({ isDark = false, children, className }: HeaderRootProps){
   return(
-    <header className={clsx("w-full flex justify-between items-cente px-3 pb-2 font-700 text-19 text-black border-b-[1px] border-dark-7", 
-                      {
-                        "border-white": isDark,
-                        "text-white": isDark,
-                      },
+    <header className={clsx("w-full flex justify-between items-cente px-3 py-2 font-700 text-19 text-black border-b-[1px] border-dark-7             dark:text-white", 
+                      {"text-white": isDark},
                       className
                        )}>
       {children}
@@ -37,13 +35,23 @@ function HeaderTitle(props: HeaderTitleProps){
 
 interface HeaderIconProps{
   children: ReactNode
-  link: string
 }
 function HeaderIcon(props: HeaderIconProps){
+
+  const {theme, setTheme} = useTheme()
+
   return(
-    <Link to={props.link}>
+    
+    <button onClick={(e) => {
+      if(theme === 'light'){
+        setTheme('dark')
+      }
+      if(theme === 'dark'){
+        setTheme('light')
+      }
+    }}>
       {props.children}
-    </Link>
+    </button>
   )
 }
 
