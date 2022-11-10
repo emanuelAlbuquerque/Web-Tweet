@@ -78,6 +78,7 @@ export function Home(){
     idUser: ''
   })
 
+  localStorage.clear()
 
 
   return(
@@ -90,6 +91,7 @@ export function Home(){
           </div>
 
 
+      
           {loginOn && <Login onClick={() => {
               //Se o loginOn for verdadeiro irá abrir o modal, se não for não vai acontecer nada, e estou passando um onclick para o login, para poder fechar o modal
               setLoginOn(false)
