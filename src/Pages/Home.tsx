@@ -78,8 +78,6 @@ export function Home(){
     idUser: ''
   })
 
-  localStorage.clear()
-
 
   return(
       <div className='w-full h-screen flex flex-col justify-between bg-white dark:bg-dark-1'>
