@@ -1,10 +1,12 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Follows, FollowsProps } from "./Follows";
 import { ItemFollow } from "./ItemFollow";
+import { withRouter } from 'storybook-addon-react-router-v6'
 
 export default {
   title: 'Components/Follows',
   component: Follows,
+  decorators: [withRouter]
 } as Meta<FollowsProps>
 
 export const FollowsLight: StoryObj<FollowsProps> = {

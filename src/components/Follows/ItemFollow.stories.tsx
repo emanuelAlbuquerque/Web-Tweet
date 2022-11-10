@@ -1,10 +1,11 @@
 import { ItemFollow, ItemFollowProps} from "./ItemFollow";
-
+import { withRouter } from 'storybook-addon-react-router-v6'
 import { Meta, StoryObj } from "@storybook/react";
 
 export default {
   title: 'Components/ItemFollows',
   component: ItemFollow,
+  decorators: [withRouter],
   args: {
     email: '@emanuel',
     name: 'Emanuel'
