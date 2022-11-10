@@ -16,6 +16,7 @@ module.exports = {
     "storyStoreV7": true,
     // "babelModeV7": true
   },
+  addons: ["storybook-addon-react-router-v6"],
   // viteFinal: (config, { configType }) => {
   //   if (configType === 'PRODUCTION') {
   //     config.base = '/desafio-sprint-5'
