@@ -1,5 +1,7 @@
 import { ItemNews, ItemNewsProps } from "./ItemNews";
 import { Meta, StoryObj } from "@storybook/react";
+import imgNoticia1 from '../../assets/img-noticia1.png'
+
 
 export default {
   title: 'Components/ItemNews',
@@ -10,7 +12,8 @@ export default {
       noticia: 'Title lasdh asldh lsad sladj aslkd laksjdklasj djas lkdjas ldkja slkdj aslkdasl dlkasdlads',
       hastag: '#hashtag',
       horario: 'Last night',
-      tema: 'US news'
+      tema: 'US news',
+      img: imgNoticia1
     // }
   }
 } as Meta<ItemNewsProps>
