@@ -1,11 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { PrimaryButton, PrimaryButtonProps } from './PrimaryButton';
+import { withRouter } from 'storybook-addon-react-router-v6'
 
 export default {
     title: 'Components/PrimaryButton',
     component: PrimaryButton,
+    decorators: [withRouter],
     args: {
-        children: 'Tweet'
+        children: 'Tweet',
     },
 } as Meta<PrimaryButtonProps>
 
@@ -20,7 +22,6 @@ export const PrimaryMedium: StoryObj<PrimaryButtonProps> = {
         height: '40'
     }
 }
-
 
 
 
