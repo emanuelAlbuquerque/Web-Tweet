@@ -13,80 +13,40 @@ import { CgProfile } from 'react-icons/cg';
 import { CiCircleMore } from 'react-icons/ci';
 import { PrimaryButton } from '../PrimaryButtons/PrimaryButton';
 import { Link } from 'react-router-dom'
+import { useTheme } from '../../hooks/useTheme'
+import { SlideMenuItem } from './SlideMenuItem'
+import { UserLogadoProps } from '../../Users/Users'
+
 
 export interface SlideMenuProps{
   isDark?: boolean
+  usuarioLogado?: UserLogadoProps
 }
 
-export function SlideMenu({isDark}:SlideMenuProps){
+export function SlideMenu({isDark, usuarioLogado}:SlideMenuProps){
 
-  let img
+  const { theme, setTheme } = useTheme()
 
-  if(isDark)
-  {
-    img = imgLogoDark
-  }
-  else
-  {
-    img = imgLogoLight
-  } 
 
   return(
     <nav>
-      <ul className={clsx('text-19 font-700 text-black', {'text-white':isDark})}>
+      <ul className={clsx('text-19 font-700 text-black dark:text-white', {'text-white':isDark})}>
         <li className='mb-4'>
           <Link to='/'>
-            <img src={img} alt="Logo do tweet"/>
+            {theme === "dark" || isDark ? <img src={imgLogoDark} alt="Logo do tweet" /> : <img src={imgLogoLight} alt="Logo do tweet" />}
           </Link>
         </li>
-        <li className='mb-4 text-primary-blue hover:text-primary-blue'>
-          <Link to='pageNotFound' className='flex items-center'>
-            <p className='mr-3'><RiHome7Fill size={25}/></p>
-            <p>Home</p>
-          </Link>
-        </li>
-        <li className='mb-4 hover:text-primary-blue'>
-          <Link to='pageNotFound' className='flex items-center'>
-            <p className='mr-3'><FiHash size={25} /></p>
-            <p>Explore</p>
-          </Link>
-        </li>
-        <li className='mb-4 hover:text-primary-blue'>
-          <Link to='pageNotFound' className='flex items-center'>
-            <p className='mr-3'><IoMdNotificationsOutline size={25} /></p>
-            <p>Notifications</p>
-          </Link>
-        </li>
-        <li className='mb-4 hover:text-primary-blue'>
-          <Link to='pageNotFound' className='flex items-center'>
-            <p className='mr-3'><BiEnvelope size={25} /></p>
-            <p>Messages</p>
-          </Link>
-        </li>
-        <li className='mb-4 hover:text-primary-blue'>
-          <Link to='pageNotFound' className='flex items-center'>
-            <p className='mr-3'><BsBookmark size={25} /></p>
-            <p>Bookmarks</p>
-          </Link>
-        </li>
-        <li className='mb-4 hover:text-primary-blue'>
-          <Link to='pageNotFound' className='flex items-center'>
-            <p className='mr-3'><RiFileList2Line size={25} /></p>
-            <p>Lists</p>
-          </Link>
-        </li>
-        <li className='mb-4 hover:text-primary-blue'>
-          <Link to='pageNotFound' className='flex items-center'>
-            <p className='mr-3'><CgProfile size={25} /></p>
-            <p>Profile</p>
-          </Link>
-        </li>
-        <li className='mb-4 hover:text-primary-blue'>
-          <Link to='pageNotFound' className='flex items-center'>
-            <p className='mr-3'><CiCircleMore size={25} /></p>
-            <p>More</p>
-          </Link>
-        </li>
+        <SlideMenuItem title='Home' icon={<RiHome7Fill size={25} />} className='text-primary-blue-active' rout='/'/>
+        <SlideMenuItem title='Explore' icon={<FiHash size={25} />}/>
+        <SlideMenuItem title='Notifications' icon={<IoMdNotificationsOutline size={25} />}/>
+        <SlideMenuItem title='Messages' icon={<BiEnvelope size={25} />}/>
+        <SlideMenuItem title='Bookmarks' icon={<BsBookmark size={25} />}/>
+        <SlideMenuItem title='Lists' icon={<RiFileList2Line size={25} />}/>
+        {usuarioLogado?.logado 
+          ? <SlideMenuItem title='Profile' icon={<CgProfile size={25} />} rout='ProfilePage' /> 
+          : <SlideMenuItem title='Profile' icon={<CgProfile size={25} />}/>
+        }
+        <SlideMenuItem title='More' icon={<CiCircleMore size={25} />}/>
       </ul>
 
       <PrimaryButton>
