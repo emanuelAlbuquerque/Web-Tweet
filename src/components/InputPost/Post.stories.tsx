@@ -1,11 +1,16 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Post, PostProps } from './Post';
+import { UserLogadoProps } from '../../Users/Users';
+import { Post } from './Post';
 
 
 export default {
   title: 'Components/Post',
   component: Post,
-} as Meta<PostProps>
+} 
 
+const usuarioLogado: UserLogadoProps = {
+  idUser: 'default',
+  logado: true
+}
 
-export const Default: StoryObj<PostProps> = {}
+export const Default = () => <Post usuarioLogado={usuarioLogado} />;
